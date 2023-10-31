@@ -9,11 +9,11 @@ import re
 
 ammountOfPosts = 1
  
-reddit_read_only = praw.Reddit(client_id="RqbArZ6NcN2TVKR6MaPY1w",         # your client id
-                               client_secret="a5qe8fn_CEOew2ryjaqfdWmYmR3Kvg",      # your client secret
-                               user_agent="Scaper")        # your user agent
+reddit_read_only = praw.Reddit(client_id="kMolVsEMMe0041y37FnL_Q",         # your client id
+                               client_secret="u8gnI-3_I70MZ0H52Wg-RYAytkWWeQ",      
+                               user_agent="Scraper")        # your user agent
  
- 
+#news, technews, 
 subreddit = reddit_read_only.subreddit("technews")
  
 # Display the name of the Subreddit
@@ -25,7 +25,7 @@ print("Display Name:", subreddit.display_name)
 # Display the description of the Subreddit
 #print("Description:", subreddit.description)
 
-subreddit = reddit_read_only.subreddit("Technews")
+
 
 # function to extract html document from given url
 def getHTMLdocument(url):
