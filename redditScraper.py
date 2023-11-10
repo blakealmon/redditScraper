@@ -1,16 +1,24 @@
 import praw
 import pandas as pd
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 # import necessary libraries
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import requests
-import re
+
+#Dot env
+SECRET_KEY = os.environ.get("CLIENT_SECRET_KEY");
+
+#secret key
+polygonAPIKEY = SECRET_KEY
 
 ammountOfPosts = 1
  
 reddit_read_only = praw.Reddit(client_id="kMolVsEMMe0041y37FnL_Q",         # your client id
-                               client_secret="u8gnI-3_I70MZ0H52Wg-RYAytkWWeQ",      
+                               client_secret=SECRET_KEY,      
                                user_agent="Scraper")        # your user agent
  
 #news, technews, 
